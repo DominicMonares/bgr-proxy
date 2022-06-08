@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/DominicMonares/bgr-proxy/issues"
   },
-  "homepage": "https://github.com/DominicMonares/bgr-proxy#readme"
+  "homepage": "https://github.com/DominicMonares/bgr-proxy#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1",
+    "supertest": "^6.2.3"
+  }
 }
