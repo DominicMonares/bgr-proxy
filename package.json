@@ -1,0 +1,19 @@
+{
+  "name": "bgr-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server between Bad Movie Recommender and IGDB API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominicMonares/bgr-proxy.git"
+  },
+  "author": "Dominic Monares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DominicMonares/bgr-proxy/issues"
+  },
+  "homepage": "https://github.com/DominicMonares/bgr-proxy#readme"
+}
