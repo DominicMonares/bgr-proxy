@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const router = require('./routes.js');
+const router = require('./routes/routes.js');
 
 const createServer = () => {
   const app = express();
