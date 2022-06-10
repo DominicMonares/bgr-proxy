@@ -12,7 +12,7 @@ const validateToken = async () => {
 
   axios.get(url, config)
     .then(res => { console.log('Hourly token validation successful!') })
-    .catch(err => { throw `Hourly token validation failed. Error: ${err}` });
+    .catch(err => { console.log(`Hourly token validation failed. Error: ${err}`) });
 }
 
 module.exports = {
