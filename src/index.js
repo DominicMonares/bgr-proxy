@@ -11,5 +11,5 @@ app.listen(8080, () => {
 
 validateToken(); // initial validation
 
-// Hourly token validation as required by Twitch
+// hourly token validation as required by Twitch
 setInterval(() => { validateToken() }, 3600000);
