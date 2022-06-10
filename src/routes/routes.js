@@ -6,7 +6,7 @@ const { getGameData } = require('../utils/getGameData.js');
 router.post('/games', (req, res) => {
   getGameData()
     .then(data => {
-      res.send(data.data);
+      res.send(data);
     })
     .catch(err => {
       res.status(500).send(err);
