@@ -1,7 +1,7 @@
 require('dotenv').config();
 const axios = require('axios');
 
-const { IGDB_URL } = require('../../constants.js');
+const { IGDB_URL } = require('../config/constants.js');
 
 const headers = {
   'Accept': 'application/json',
