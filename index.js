@@ -1,7 +1,7 @@
 const express = require('express');
 
 const createServer = require('./src/server.js');
-const { validateToken } = require('./src/utils/validateToken.js');
+const { validateToken } = require('./src/services/validateToken.js');
 
 const app = createServer();
 

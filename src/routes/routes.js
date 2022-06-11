@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const { getGameData } = require('../utils/getGameData.js');
+const { getGameData } = require('../services/getGameData.js');
 
-router.post('/games', (req, res) => {
+router.post('/games/:page', (req, res) => {
   getGameData()
     .then(data => {
       res.send(data);
