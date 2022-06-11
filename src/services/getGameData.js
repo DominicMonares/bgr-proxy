@@ -19,11 +19,12 @@ const getGameData = (page) => {
     data: `fields
       genres,
       name,
-      parent_game,
       rating,
       url;
       sort rating asc;
-      limit 5;`
+      limit 5;
+      offset ${(page - 1) * 5};
+    `
   })
     .then(async games => {
       const fullGames = await Promise.all(games.data.map(async game => {
@@ -56,6 +57,7 @@ const getCover = (id) => {
 
 const getGenres = async (genres) => {
   if (!genres) { return ['N/A'] }
+
   const fullGenres = await Promise.all(genres.map(async genre => {
     return await axios({
       method: 'POST',
@@ -73,6 +75,7 @@ const getGenres = async (genres) => {
 }
 
 module.exports = {
+  getGameData: getGameData,
   getCover: getCover,
-  getGameData: getGameData
+  getGenres: getGenres
 }
