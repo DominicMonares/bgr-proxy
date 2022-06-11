@@ -1,2 +1,8 @@
-.env
+# Dependencies
 node_modules
+
+# API Keys
+.env
+
+# Tests
+coverage
