@@ -1,7 +1,7 @@
 require('dotenv').config();
 const axios = require('axios');
 
-const validateToken = async () => {
+const validateToken = () => {
   const url = 'https://id.twitch.tv/oauth2/validate';
   const token = process.env.CLIENT_TOKEN;
   const config = {
