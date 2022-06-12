@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { getGameData } = require('../services/getGameData.js');
 
-router.post('/games/:page?', (req, res) => {
+router.get('/games/:page?', (req, res) => {
   getGameData(req.params.page)
     .then(data => {
       res.send(data);
