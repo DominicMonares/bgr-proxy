@@ -50,7 +50,7 @@ const getCover = (id) => {
     .then(res => {
       let link;
       if (res.data.length === 0) {
-        link = 'https://images.igdb.com/igdb/image/upload/t_cover_big/nocover.png';
+        link = '//images.igdb.com/igdb/image/upload/t_cover_big/nocover.png';
       } else {
         const url = res['data'][0]['url'];
         link = url.replace('thumb', 'cover_big');
