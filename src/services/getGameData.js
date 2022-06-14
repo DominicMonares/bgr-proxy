@@ -48,8 +48,13 @@ const getCover = (id) => {
     data: `fields url; where game = ${id};`
   })
     .then(res => {
-      const url = res['data'][0]['url'];
-      const link = url.replace('thumb', 'cover_big');
+      let link;
+      if (res.data.length === 0) {
+        link = 'https://images.igdb.com/igdb/image/upload/t_cover_big/nocover.png';
+      } else {
+        const url = res['data'][0]['url'];
+        link = url.replace('thumb', 'cover_big');
+      }
       return `https:${link}`;
     })
     .catch(err => { throw `Error fetching game cover: ${err}` });
