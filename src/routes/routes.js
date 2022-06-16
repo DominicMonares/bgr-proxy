@@ -5,12 +5,12 @@ const { getGameData } = require('../services/getGameData.js');
 
 router.get('/games/:page?', (req, res) => {
   getGameData(req.params.page)
-    // 1 sec delay to avoid exceeding rate limit
+    // 2 sec delay to avoid exceeding rate limit
     .then(data => {
       setTimeout(() => {
         res.header("Access-Control-Allow-Origin", "*");
         res.send(data);
-      }, 1000)
+      }, 2000)
     })
     .catch(err => {
       res.status(500).send(err);
