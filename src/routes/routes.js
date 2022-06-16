@@ -6,6 +6,7 @@ const { getGameData } = require('../services/getGameData.js');
 router.get('/games/:page?', (req, res) => {
   getGameData(req.params.page)
     .then(data => {
+      res.header("Access-Control-Allow-Origin", "*");
       res.send(data);
     })
     .catch(err => {
